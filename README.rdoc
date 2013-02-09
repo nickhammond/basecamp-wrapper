@@ -78,7 +78,7 @@ would do the following:
 To find all messages for a given project, use find(:all), passing the
 project_id as a parameter to find. Example:
 
-  messages = Basecamp::Message.find(:all, params => { :project_id => 1037 })
+  messages = Basecamp::Message.find(:all, :params => { :project_id => 1037 })
   messages.size # => 25
 
 To get the current logged in user:
@@ -206,7 +206,7 @@ Note: We recommend using xml. There are some API calls that don't behave well wi
 
 You can acces the last response object:
 
-  Basecamp::Message.find(:all, params => { :project_id => 1037 })
+  Basecamp::Message.find(:all, :params => { :project_id => 1037 })
   Basecamp::Message.connection.response["status"] # => "200 OK"
 
 = Using the raw response body
